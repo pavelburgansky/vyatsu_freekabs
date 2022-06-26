@@ -2,102 +2,123 @@
 <html lang="ru">
 <meta charset="utf-8">
 <head>
-    <title>qwe3</title>
-    <link href="css/cascad.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+ <style>
+    body {
+    background-color: #D4E6B3;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+}
+html {
+    height: 100%;
+}
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    color: white;
+    background-color: #007196;
+    text-align: center;
+    vertical-align: center;
+}
+select {
+    width: 120px; /* Ширина списка в пикселах */
+}
+
+ </style>
+ <title> freecabs</title>
 </head>
 
 <body topmargin="50px"
       leftmargin="100px" bottommargin="100px" rightmargin="100px" bgcolor="#00FFFF">
 <header>
-    <img src="logo.jpg" width="100px" align="left">
+    <!-- <img src="pictures/logo.jpg" width="100px" align="left"> -->
     <h1 align="center" style="color:green" face="Arial"> Поиск свободных аудиторий Вятгу</h1>
 </header>
 <main>
-    <form action="index1.php" method="post">
-        <table  border="0" cellpadding="5" cellspacing="0" align="right" width="60%">
-            <tr>
-                <td valign="top" width="300px;">
-                    <table  border="0" cellpadding="0" cellspacing="0" align="center" width="150%" >
-                        <tr>
-                            <th>Корпус</th>
-                        </tr>
-                        <tr>
-                            <td valign="left">
-                                <select name="корпус" maxlength="5" Value="день"multiple size="25">
-                                    <option>1
-                                    <option>2
-                                    <option>3
-                                    <option>4
-                                    <option>5
-                                    <option>6
-                                    <option>7
-                                    <option>8
-                                    <option>9
-                                    <option>10
-                                    <option>11
-                                    <option>12
-                                    <option>13
-                                    <option>14
-                                    <option>15
-                                    <option>16
-                                    <option>17
-                                    <option>18
-                                    <option>19
-                                    <option>20
-                                    <option>21
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Выберите дату: <input type="date" name="calendar">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Мест в аудитории от: <input type="number" id="date" name ="number_of_seats" style="width:40px" min="0" max="99">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Выберете номер пары:<br>
-                                <input type="checkbox" name="para[0]" value="1 пара" /> 1 пара<br />
-                                <input type="checkbox" name="para[1]" value="2 пара" /> 2 пара<br />
-                                <input type="checkbox" name="para[2]" value="3 пара" /> 3 пара<br />
-                                <input type="checkbox" name="para[3]" value="4 пара" /> 4 пара<br />
-                                <input type="checkbox" name="para[4]" value="5 пара" /> 5 пара<br />
-                                <input type="checkbox" name="para[5]" value="6 пара" /> 6 пара<br />
-                                <input type="checkbox" name="para[6]" value="7 пара" /> 7 пара<br />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <input type="checkbox" name="projector" value="1" /> Проектор<br />
-                                <input type="checkbox" name="komp_class" value="2" /> Компьютерный класс <br />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center" style="height:40px;" valign="bottom"><input type="submit" id="reg_button" value="Найти!"></td>
-                        </tr>
-                </table>
-                </td>
-                <td valign="top">
-                    <table border="0" width="100%">
-                        <tr>
-                            <th style="height:20px;"  align="center">Полезные ссылки </th>
-                        </tr>
-                        <tr>
-                            <td id="rezulttd" valign="top">&nbsp;
-                                <p><a href="https://www.vyatsu.ru/">Сайт Вятгу</a></p>
-                                
-                             </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </form>
+<div class="col-md-7 offset-md-4">
+<form action="index1.php" method="post">
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">Корпус</label>
+    <select name="корпус" class="form-control" id="exampleFormControlSelect1" style="width:60px">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    </select>
+    </div>
+   <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">Дата</label>
+    <label for="date" class="control-label col-xs-2"></label>
+     <div class="col-xs-10">
+     <input type="date" class="form-control" id="date" name="calendar" placeholder="введите дату" style="width:150px">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">Мест в аудитории от</label>
+    <label for="date" class="control-label col-xs-2"></label>
+     <div class="col-xs-10">
+     <input type="number" name ="number_of_seats" min="1" max="180" step="1" class="form-control"/>
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">Выберете пары</label>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="para[0]" value="1 пара">
+  <label class="form-check-label" for="inlineCheckbox1">1</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="para[1]" value="2 пара">
+  <label class="form-check-label" for="inlineCheckbox2">2</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="para[2]" value="3 пара">
+  <label class="form-check-label" for="inlineCheckbox1">3</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="para[3]" value="4 пара">
+  <label class="form-check-label" for="inlineCheckbox2">4</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="para[4]" value="5 пара">
+  <label class="form-check-label" for="inlineCheckbox1">5</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="para[5]" value="6 пара">
+  <label class="form-check-label" for="inlineCheckbox2">6</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="para[6]" value="7 пара">
+  <label class="form-check-label" for="inlineCheckbox1">7</label>
+</div>
+</div>
 
+<div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">Проектор</label>
+    <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1"></label>
+</div>
+  </div>
+
+<div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">Компьютерный класс</label>
+    <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1"></label>
+</div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label"></label>
+<button type="submit" class="btn btn-primary">Найти!</button>   
+</form>
+</div>
 </main>
 </body>
 </html>
